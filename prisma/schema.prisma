@@ -9,3 +9,63 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id String @id @default(uuid())
+  firstName String
+  lastName String
+  email String
+  hasPassword String
+  phoneNumber String
+  role UserRole @default(User)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id String @id @default(uuid())
+  name String
+  image String?
+  price String
+  stock String
+  regularPrice String
+  discount String
+  tags String[]
+  Products_Categories Products_Categories[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id String @id @default(uuid())
+  name String
+  iconId String
+  Icon Icons?
+  Products_Categories Products_Categories[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Products_Categories {
+  id String @id @default(uuid())
+  productId String
+  categoryId String
+  Products Product @relation(fields: [productId], references: [id])
+  Categories Category @relation(fields: [categoryId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Icons {
+  id String @id @default(uuid())
+  name String
+  categoryId String @unique
+  Categories Category @relation(fields: [categoryId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum UserRole {
+  User
+  Admin
+}

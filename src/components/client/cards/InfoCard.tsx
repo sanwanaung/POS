@@ -7,10 +7,11 @@ const InfoCard = () => {
     <Box
       sx={{
         bgcolor: "white",
-        height: "10rem",
+        height: "max-content",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        flexWrap: "wrap",
         gap: "10px",
       }}
     >
@@ -21,13 +22,19 @@ const InfoCard = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              flexBasis: "24%",
+              flexBasis: {
+                xs: "100%",
+                sm: "48%",
+                md: "48%",
+                lg: "22%",
+              },
               height: "5rem",
               padding: "14px 18px",
               bgcolor: "white",
               boxShadow: "0 1px 20px 4px rgba(0, 0, 0, 0.1)",
               borderRadius: "5px",
               gap: "10px",
+              flexShrink: 0,
             }}
           >
             <Box>

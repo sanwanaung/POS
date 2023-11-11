@@ -39,6 +39,10 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import PaymentIcon from "@mui/icons-material/Payment";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import DinnerDiningOutlinedIcon from "@mui/icons-material/DinnerDiningOutlined";
+import CoffeeOutlinedIcon from "@mui/icons-material/CoffeeOutlined";
+import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
 
 export const InfoCardItems = [
   {
@@ -64,5 +68,28 @@ export const InfoCardItems = [
     title: "Payment",
     subtitle: "Secure system",
     icon: PaymentIcon,
+  },
+];
+
+export const DesktopSidebar = [
+  {
+    id: 1,
+    name: "Home",
+    icon: HomeOutlinedIcon,
+  },
+  {
+    id: 2,
+    name: "Breakfast",
+    icon: DinnerDiningOutlinedIcon,
+  },
+  {
+    id: 3,
+    name: "Coffee",
+    icon: CoffeeOutlinedIcon,
+  },
+  {
+    id: 4,
+    name: "Lunch",
+    icon: LunchDiningOutlinedIcon,
   },
 ];

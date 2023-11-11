@@ -8,27 +8,23 @@ const TopbarInputStyle = styled(InputBase)(({ theme }) => ({
     border: "none",
     padding: "6px 8px",
     outline: "none",
+    width: "100%",
+    display: "block",
   },
 }));
 
-interface TopbarInputTypes {
+interface Props {
   onFocus: () => void;
   onBlur: () => void;
 }
 
-const TopbarInput: FC<TopbarInputTypes> = ({ onBlur, onFocus }) => {
+const TopbarInput: FC<Props> = ({ onFocus, onBlur }) => {
   return (
     <TopbarInputStyle
-      placeholder="Hello"
-      onFocus={() => {
-        onFocus();
-      }}
-      onBlur={() => {
-        onBlur();
-      }}
-      sx={{
-        width: "100%",
-      }}
+      placeholder="Search for...."
+      sx={{ width: "100%" }}
+      onFocus={() => onFocus()}
+      onBlur={() => onBlur()}
     />
   );
 };

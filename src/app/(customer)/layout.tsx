@@ -8,25 +8,8 @@ export default function CustomerLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Box>
-      <Box
-        sx={{
-          bgcolor: "#eee",
-          width: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            height: "5rem",
-            width: "90%",
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <ClientTopbar />
-        </Box>
-      </Box>
+    <Box sx={{ height: "150vh" }}>
+      <ClientTopbar />
       <Box
         sx={{
           display: "flex",
@@ -38,23 +21,19 @@ export default function CustomerLayout({
           maxHeight: "100vh",
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            mt: "1rem",
+            mb: "1rem",
+          }}
+        >
           <InfoCard />
         </Box>
         <Box
           sx={{
-            display: "flex",
-            gap: "10px",
+            width: "100%",
           }}
         >
-          <Box
-            sx={{
-              width: "18rem",
-              bgcolor: "#eee",
-            }}
-          >
-            Sidebar
-          </Box>
           <>{children}</>
         </Box>
       </Box>

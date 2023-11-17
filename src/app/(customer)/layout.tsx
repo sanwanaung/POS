@@ -1,5 +1,5 @@
 import InfoCard from "@/components/client/cards/InfoCard";
-import ClientTopbar from "@/components/client/Topbar/ClientTopbar";
+import ClientTopbar from "@/components/layout/Topbar/TopBar";
 import { Box } from "@mui/material";
 
 export default function CustomerLayout({

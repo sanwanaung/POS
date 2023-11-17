@@ -4,10 +4,10 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <main>
       <nav>It is Admin Side</nav>
 
       {children}
-    </section>
+    </main>
   );
 }

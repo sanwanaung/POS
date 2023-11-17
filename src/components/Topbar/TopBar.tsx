@@ -5,9 +5,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TopbarInput from "./TopbarInput";
-import { useScrollPosition } from "@/lib/client/useScrollPosition";
+import { useScrollPosition } from "@/lib/useScrollPosition";
 
-const ClientTopbar = () => {
+const TopBar = () => {
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const { scrollPosition } = useScrollPosition();
 
@@ -110,4 +110,4 @@ const ClientTopbar = () => {
   );
 };
 
-export default ClientTopbar;
+export default TopBar;
